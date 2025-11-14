@@ -33,7 +33,7 @@ public class EmployeeProfileController {
     }
 
     @DeleteMapping("deleteById")
-    public ResponseEntity<EmployeeProfile> deleteEmployeeProfileById(@RequestBody Integer employeeProfileId){
+    public ResponseEntity<EmployeeProfile> deleteEmployeeProfileById(@PathVariable Integer employeeProfileId){
         employeeProfileService.deleteById(employeeProfileId);
         return  new ResponseEntity<>(HttpStatus.OK);
     }
